@@ -82,7 +82,7 @@ goto end
 :every_2_min
 ECHO Exporting %dbname% as %dbfilename% for every 2 min
 :a
-c:\xampp\mysql\bin\mysqldump --user=root --password=root --result-file="C:\Users\%USERNAME%\Downloads\%dbfilename%.sql" %dbname%
+c:\xampp\mysql\bin\mysqldump --user=%usr% --password=%pass% --result-file="C:\Users\%USERNAME%\Downloads\%dbfilename%.sql" %dbname%
 ECHO Exported %dbname% as %dbfilename% located at path C:\Users\%USERNAME%\Downloads (Next export in 2min)
 Timeout /T 120 /nobreak >nul
 goto a
